@@ -1,0 +1,5 @@
+project('tutorial', 'cpp')
+cvdep = dependency('opencv4', version : '>= 4.0.0')
+eigendep = dependency('eigen3', version : '>= 3.3.0')
+# executable('demo', 'main.cpp', dependencies : cvdep)
+executable('demo', 'main.cpp', dependencies : [cvdep, eigendep])
